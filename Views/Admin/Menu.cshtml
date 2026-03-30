@@ -1,0 +1,27 @@
+@model IEnumerable<RestaurantWebsite.Models.MenuItem>
+
+@{
+    ViewData["Title"] = "Menu";
+}
+
+<div class="d-flex justify-content-between mb-3">
+    <h2>Menu Items</h2>
+    <a href="/Admin/AddMenu" class="btn btn-primary">+ Add Item</a>
+</div>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card p-3">
+                <img src="@item.ImageUrl" class="img-fluid mb-3" style="height:200px; object-fit:cover;" />
+
+                <h4>@item.Name</h4>
+                <p>@item.Description</p>
+
+                <h5 class="text-danger">$@item.Price</h5>
+                <p><strong>@item.Category?.Name</strong></p>
+            </div>
+        </div>
+    }
+</div>

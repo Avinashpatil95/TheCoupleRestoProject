@@ -1,0 +1,32 @@
+﻿@model IEnumerable<RestaurantWebsite.Models.MenuItem>
+
+<!-- HERO SECTION -->
+<div class="hero">
+    <div>
+        <h1>Welcome to The Couple Restaurant</h1>
+        <p>Delicious food & unforgettable experience</p>
+        <a href="/Reservation/Create" class="btn btn-main">Book a Table</a>
+    </div>
+</div>
+
+<!-- FEATURED MENU -->
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Featured Dishes</h2>
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="menu-card">
+                    <img src="@item.ImageUrl" class="img-fluid" />
+
+                    <div class="p-3">
+                        <h4>@item.Name</h4>
+                        <p>@item.Description</p>
+                        <h5 class="text-danger">$@item.Price</h5>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

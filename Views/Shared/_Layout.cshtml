@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Restaurant</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Segoe UI';
+        }
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1522906456132-bac22adad34e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover;
+            height: 90vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: #4c8d73
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+        .btn-main {
+            background: #c0392b;
+            color: white;
+            border-radius: 30px;
+            padding: 10px 25px;
+        }
+
+        .menu-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .menu-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        footer {
+            background: #b68888;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .navbar {
+            background: #b68888;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="/"> The Couple Resto 🍽️ </a>
+
+        <div>
+            <a class="nav-link d-inline text-white" href="/">Home</a>
+            <a class="nav-link d-inline text-white" href="/Menu">Menu</a>
+            <a class="nav-link d-inline text-white" href="/Reservation/Create">Book Table</a>
+            <a class="nav-link d-inline text-white" href="/Home/About">About</a>
+        </div>
+    </div>
+</nav>
+
+@RenderBody()
+
+<footer>
+    <p>© 2026 Restaurant | Designed by Avi'$</p>
+</footer>
+
+</body>
+</html>

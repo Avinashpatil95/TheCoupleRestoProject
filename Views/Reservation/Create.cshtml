@@ -1,0 +1,29 @@
+@model RestaurantWebsite.Models.Reservation
+
+<div class="container mt-5">
+    <h2>Book a Table</h2>
+
+    <form method="post">
+        <div class="mb-3">
+            <input asp-for="CustomerName" class="form-control" placeholder="Your Name" />
+        </div>
+
+        <div class="mb-3">
+            <input asp-for="Email" class="form-control" placeholder="Email" />
+        </div>
+
+        <div class="mb-3">
+            <input asp-for="Phone" class="form-control" placeholder="Phone" />
+        </div>
+
+        <div class="mb-3">
+            <input asp-for="ReservationDate" type="datetime-local" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <input asp-for="People" type="number" class="form-control" placeholder="People" />
+        </div>
+
+        <button class="btn btn-main">Reserve Now</button>
+    </form>
+</div>

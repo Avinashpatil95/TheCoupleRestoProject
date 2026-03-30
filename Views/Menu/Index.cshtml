@@ -1,0 +1,22 @@
+@model IEnumerable<RestaurantWebsite.Models.MenuItem>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Our Menu</h2>
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="menu-card">
+                    <img src="@item.ImageUrl" />
+
+                    <div class="p-3">
+                        <h4>@item.Name</h4>
+                        <p>@item.Description</p>
+                        <h5 class="text-danger">$@item.Price</h5>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
